@@ -307,7 +307,6 @@ void Sistema::editarCompra()
                 break;
             }
             case 2:
-                delete boleto;
                 return;
             default:
                 cout << "Opción no válida. Intente de nuevo." << endl;
@@ -349,7 +348,6 @@ void Sistema::eliminarCompra()
             boleto->getEvento()->liberarAsiento(boleto->getAsiento());
             listaUsuarios[usuarioActivoIndex].borrarBoleto(idBoleto);            
             cout << "Compra eliminada exitosamente." << endl;
-            delete boleto;
             break;
         }
     }
